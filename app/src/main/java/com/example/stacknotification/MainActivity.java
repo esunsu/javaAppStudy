@@ -116,7 +116,8 @@ public class MainActivity extends AppCompatActivity {
                 .setPriority(NotificationCompat.PRIORITY_HIGH) // 알림 중요도
                 .setContentIntent(pendingIntent) // 알림 클릭 시 실행할 Intent
                 .setGroup(GROUP_KEY) // 알림 그룹 지정
-                .setAutoCancel(true); // 알림 클릭 시 자동으로 삭제
+                .setAutoCancel(true) // 알림 클릭 시 자동으로 삭제
+                .setVisibility(NotificationCompat.VISIBILITY_PUBLIC); // 잠금화면에서 바로 보이게 설정
 
         // 권한이 부여되지 않은 경우에는 알림을 표시하지 않음
         if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.POST_NOTIFICATIONS)
